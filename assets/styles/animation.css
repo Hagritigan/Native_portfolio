@@ -1,0 +1,748 @@
+    html {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .back__text {
+        font-size: 600px;
+        font-family: "NHL_Edge_Detroit", sans-serif;
+        -webkit-text-stroke-color: #FFFFFF;
+        -webkit-text-stroke-width: 2px;
+        color: rgb(0, 0, 0, 0);
+        margin: 0px 0px 0px -45px;
+        opacity: 6%;
+        position: absolute;
+        top: 10%;
+        z-index: 1;
+    }
+
+    .number__text {
+        font-size: 170px;
+        font-family: "NHL_Edge_Detroit", sans-serif;
+        color: white;
+    }
+
+    .mid_text {
+        font-size: 18px;
+        font-family: "NHL_Edge_Detroit", sans-serif;
+        color: white;
+        padding: 0 20px;
+        text-shadow: 1px 1px 2px black, 0 0 1em black;
+    }
+
+
+    .yzer_container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .yzer_content {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #0C0A08 0%, rgba(12, 10, 8, 0) 100%), url(media/Background_Y.jpg);
+        margin: auto;
+        max-width: 1920px;
+        min-height: 1080px;
+        padding: 40px;
+    }
+
+
+    .inborder_content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #FFFFFF;
+        backdrop-filter: blur(10px);
+    }
+
+
+    .content__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 200px;
+        z-index: 2;
+    }
+
+
+    .right {
+        height: 100%;
+    }
+
+    .left {
+        height: 100%;
+    }
+
+    .content__middle {
+        min-heightheight: 780px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        z-index: 3;
+    }
+
+    .inform {
+        width: 60%;
+    }
+
+    .inform_text {
+        height: 90%;
+        border: 1px solid #FFFFFF ;
+        margin: 3%;
+        border-radius: 20px;
+        display: none;
+        padding: 0 15px 0 15px;
+    }
+
+    .stat_text {
+        height: 90%;
+        margin: 3%;
+        display: none;
+        padding: 0 15px 0 15px;
+    }
+
+    .active_text {
+        display: block;
+    }
+
+    .img1 {
+        float:left;
+        margin: 20px;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        padding: 5px;
+        background-color: #45a1ff;
+        color: #fff;
+        font-family: "NHL_Edge_Detroit", sans-serif;
+    }
+
+    /* Блок с меню */
+
+    .active_menu {
+        display: block;
+        max-height: 9999px;
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        animation: showAnimation 0.5s ease-in-out;
+        -moz-animation: showAnimation 0.5s ease-in-out;
+        -webkit-animation: showAnimation 0.5s ease-in-out;
+        -moz-transition: max-height 1s ease-in-out;
+        -o-transition: max-height 1s ease-in-out;
+        -webkit-transition: max-height 1s ease-in-out;
+        transition: max-height 1s ease-in-out;
+    }
+
+    .menu {
+        font-family: "NHL_Edge_Detroit", sans-serif;
+        font-size: 40px;
+        width: 22%;
+        margin: 50px auto;
+    }
+
+    *, *:before, *:after {
+        -webkit-border-sizing: border-box;
+        -moz-border-sizing: border-box;
+        border-sizing: border-box;
+    }
+
+
+    .menu > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .wrap_menu a {
+        text-decoration: none;
+    }
+    .wrap_menu [data-toggle="wrap_menu"] {
+        position: relative;
+        display: block;
+        color: white;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+    .wrap_menu [data-toggle="wrap_menu"]:hover {
+        color: #CE1126;
+    }
+
+    .wrap_menu .icon-arrow {
+        position: absolute;
+        display: block;
+        font-size: 0.7em;
+        color: #fff;
+        top: 14px;
+        right: 10px;
+    }
+
+    .wrap_menu .icon-arrow:hover {
+        color: #CE1126;
+    }
+
+    .wrap_menu .icon-arrow.open {
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        -moz-transition: -moz-transform 0.6s;
+        -o-transition: -o-transform 0.6s;
+        -webkit-transition: -webkit-transform 0.6s;
+        transition: transform 0.6s;
+    }
+    .wrap_menu .icon-arrow.close {
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -moz-transition: -moz-transform 0.6s;
+        -o-transition: -o-transform 0.6s;
+        -webkit-transition: -webkit-transform 0.6s;
+        transition: transform 0.6s;
+    }
+    .wrap_menu .icon-arrow:before {
+        content: '\25BC';
+    }
+    .wrap_menu .drop-menu {
+        max-height: 0;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .wrap_menu .drop-menu li {
+        padding: 0;
+    }
+    .wrap_menu .drop-menu li a {
+        display: block;
+        color: #CE1126;
+        padding: 10px 10px;
+    }
+    .wrap_menu .drop-menu li a:hover {
+    }
+    .wrap_menu .show, .drop-menu .hide {
+        -moz-transform-origin: 50% 0%;
+        -ms-transform-origin: 50% 0%;
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+    }
+    .wrap_menu .show {
+        display: block;
+        max-height: 9999px;
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        animation: showAnimation 0.5s ease-in-out;
+        -moz-animation: showAnimation 0.5s ease-in-out;
+        -webkit-animation: showAnimation 0.5s ease-in-out;
+        -moz-transition: max-height 1s ease-in-out;
+        -o-transition: max-height 1s ease-in-out;
+        -webkit-transition: max-height 1s ease-in-out;
+        transition: max-height 1s ease-in-out;
+    }
+    .wrap_menu .hide {
+        max-height: 0;
+        -moz-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        animation: hideAnimation 0.4s ease-out;
+        -moz-animation: hideAnimation 0.4s ease-out;
+        -webkit-animation: hideAnimation 0.4s ease-out;
+        -moz-transition: max-height 0.6s ease-out;
+        -o-transition: max-height 0.6s ease-out;
+        -webkit-transition: max-height 0.6s ease-out;
+        transition: max-height 0.6s ease-out;
+    }
+
+    @keyframes showAnimation {
+        0% {
+            -moz-transform: scaleY(0.1);
+            -ms-transform: scaleY(0.1);
+            -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+        }
+        40% {
+            -moz-transform: scaleY(1.04);
+            -ms-transform: scaleY(1.04);
+            -webkit-transform: scaleY(1.04);
+            transform: scaleY(1.04);
+        }
+        60% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.04);
+            -ms-transform: scaleY(1.04);
+            -webkit-transform: scaleY(1.04);
+            transform: scaleY(1.04);
+        }
+        100% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.02);
+            -ms-transform: scaleY(1.02);
+            -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
+        }
+        100% {
+            -moz-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+    }
+    @-moz-keyframes showAnimation {
+        0% {
+            -moz-transform: scaleY(0.1);
+            -ms-transform: scaleY(0.1);
+            -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+        }
+        40% {
+            -moz-transform: scaleY(1.04);
+            -ms-transform: scaleY(1.04);
+            -webkit-transform: scaleY(1.04);
+            transform: scaleY(1.04);
+        }
+        60% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.04);
+            -ms-transform: scaleY(1.04);
+            -webkit-transform: scaleY(1.04);
+            transform: scaleY(1.04);
+        }
+        100% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.02);
+            -ms-transform: scaleY(1.02);
+            -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
+        }
+        100% {
+            -moz-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+    }
+    @-webkit-keyframes showAnimation {
+        0% {
+            -moz-transform: scaleY(0.1);
+            -ms-transform: scaleY(0.1);
+            -webkit-transform: scaleY(0.1);
+            transform: scaleY(0.1);
+        }
+        40% {
+            -moz-transform: scaleY(1.04);
+            -ms-transform: scaleY(1.04);
+            -webkit-transform: scaleY(1.04);
+            transform: scaleY(1.04);
+        }
+        60% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.04);
+            -ms-transform: scaleY(1.04);
+            -webkit-transform: scaleY(1.04);
+            transform: scaleY(1.04);
+        }
+        100% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.02);
+            -ms-transform: scaleY(1.02);
+            -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
+        }
+        100% {
+            -moz-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+    }
+    @keyframes hideAnimation {
+        0% {
+            -moz-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+        60% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.02);
+            -ms-transform: scaleY(1.02);
+            -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
+        }
+        100% {
+            -moz-transform: scaleY(0);
+            -ms-transform: scaleY(0);
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    }
+    @-moz-keyframes hideAnimation {
+        0% {
+            -moz-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+        60% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.02);
+            -ms-transform: scaleY(1.02);
+            -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
+        }
+        100% {
+            -moz-transform: scaleY(0);
+            -ms-transform: scaleY(0);
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    }
+    @-webkit-keyframes hideAnimation {
+        0% {
+            -moz-transform: scaleY(1);
+            -ms-transform: scaleY(1);
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+        60% {
+            -moz-transform: scaleY(0.98);
+            -ms-transform: scaleY(0.98);
+            -webkit-transform: scaleY(0.98);
+            transform: scaleY(0.98);
+        }
+        80% {
+            -moz-transform: scaleY(1.02);
+            -ms-transform: scaleY(1.02);
+            -webkit-transform: scaleY(1.02);
+            transform: scaleY(1.02);
+        }
+        100% {
+            -moz-transform: scaleY(0);
+            -ms-transform: scaleY(0);
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+        }
+    }
+
+    /* Блок с медиазапросами */
+
+    @media screen and (device-width: 1200px) {
+
+        .yzer_content {
+            width: 100%;
+            max-width: 1100px;
+            padding: 10px;
+            background: url(media/Background_Y_1200.jpg);
+        }
+        .back__text {
+            font-size: 360px;
+        }
+        .number__text {
+            font-size: 102px;
+        }
+        .mid_text {
+            font-size: 12px;
+        }
+        .menu {
+            font-size: 24px;
+            margin: 40px auto;
+            width: 100%;
+        }
+
+        .menu_elem {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .content__middle {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .inform {
+            width: 100%;
+            height: 530px;
+        }
+        .content__top {
+            height: 100px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wrap_menu .icon-arrow {
+            right: -6px;
+        }
+
+        .logo {
+            height: 60%;
+        }
+    }
+
+    @media screen and (device-width: 1024px) {
+        .yzer_content {
+            max-width: 936px;
+            width: 100%;
+            padding: 10px;
+            background: url(media/Background_Y_1024.jpg);
+        }
+        .back__text {
+            font-size: 300px;
+        }
+        .number__text {
+            font-size: 86px;
+            left: 3%;
+        }
+        .mid_text {
+            font-size: 12px;
+        }
+        .menu {
+            font-size: 20px;
+            margin: 35px auto;
+            width: 100%;
+        }
+
+        .logo {
+            height: 100%;
+        }
+        .menu_elem {
+            display: flex;
+            flex-direction: row;
+        }
+        .content__middle {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .inform {
+            width: 100%;
+            height: 570px;
+        }
+        .content__top {
+            height: 100px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wrap_menu .icon-arrow {
+            right: -6px;
+        }
+
+    }
+
+    @media screen and (device-width: 768px) {
+        .yzer_content {
+            width: 100%;
+            max-width: 700px;
+            padding: 10px;
+            background: url(media/Background_Y_768.jpg);
+        }
+        .back__text {
+            font-size: 226px;
+            left: 5%;
+        }
+        .number__text {
+            font-size: 66px;
+            left: 5%;
+        }
+        .mid_text {
+            font-size: 10px;
+        }
+        .menu {
+            font-size: 14px;
+            margin: 35px auto;
+            width: 100%;
+        }
+        .logo {
+            height: 100%;
+        }
+        .menu_elem {
+            display: flex;
+            flex-direction: row;
+        }
+        .content__middle {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .inform {
+            width: 100%;
+            height: 670px;
+        }
+        .content__top {
+            height: 100px;
+        }
+
+        .wrap_menu .icon-arrow {
+            right: 0px;
+        }
+    }
+
+    @media screen and (device-width: 540px) {
+        .yzer_content{
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            background: url(media/Background_Y_540.jpg);
+        }
+        .back__text {
+            font-size: 160px;
+            left: 8%;
+        }
+        .number__text {
+            font-size: 46px;
+            left: 5%;
+        }
+        .mid_text {
+            font-size: 10px;
+        }
+        .menu {
+            font-size: 10px;
+            margin: 0px ;
+            width: 100%;
+        }
+        .logo {
+            height: 100%;
+        }
+        .menu_elem {
+            display: flex;
+            flex-direction: row;
+        }
+        .content__middle {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .inform {
+            width: 100%;
+            height: 720px;
+        }
+        .content__top {
+            height: 50px;
+        }
+
+        .wrap_menu .icon-arrow {
+            top: 11px;
+            right: 3px;
+        }
+
+        .inform_text {
+            border: 0;
+        }
+
+    }
+
+    @media screen and (device-width: 320px) {
+        .yzer_content {
+            width: 100%;
+            max-width: 300px;
+            padding: 10px;
+            background: url(media/Background_Y_320.jpg);
+        }
+        .back__text {
+            font-size: 90px;
+            left: 17%;
+        }
+        .number__text {
+            font-size: 46px;
+            left: 5%;
+        }
+        .mid_text {
+            font-size: 10px;
+        }
+        .menu {
+            font-size: 5px;
+            margin: 0px auto;
+            width: 100%;
+        }
+        .logo {
+            height: 100%;
+        }
+        .menu_elem {
+            display: flex;
+            flex-direction: row;
+        }
+        .content__middle {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .inform {
+            width: 100%;
+            height: 730px;
+        }
+        .content__top {
+            height: 50px;
+        }
+
+        .wrap_menu .icon-arrow {
+            top: 11px;
+        }
+
+        .inform_text {
+            border: 0;
+        }
+
+    }
+
+    .row {
+        font-family: NHL_Edge_Detroit, sans-serif;
+        color: white;
+        border: 0.5px solid white;
+    }
+
+    .row: hover {
+        color: gray;
+    }
